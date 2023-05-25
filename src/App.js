@@ -1,5 +1,5 @@
 import AddTask from "./components/add-task/AddTask";
-import DisplayTasks from "./components/display-tasks/DisplayTasks";
+import Tasks from "./components/display-tasks/Tasks";
 import classes from "./app.module.css";
 import { useState } from "react";
 
@@ -20,7 +20,7 @@ const App = () => {
         {toggleAddTask ? <SlArrowUp size={35} /> : <SlArrowDown size={35} />}
       </span>
       {toggleAddTask && <AddTask />}
-      <DisplayTasks />
+      <Tasks />
     </div>
   );
 };

@@ -1,0 +1,19 @@
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+h3 {
+  font-size: 35px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  border-bottom: 0.5px solid var(--lightest-gray);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0;
+}
