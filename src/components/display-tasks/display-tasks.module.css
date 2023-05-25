@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 70px 70px;
+}
+
+h3 {
+  font-size: 35px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  border-bottom: 0.5px solid var(--lightest-gray);
+}
+
+.container .wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  width: 900px;
+  color: var(--lightest-gray);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0;
+}

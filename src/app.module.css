@@ -1,0 +1,43 @@
+.main-container {
+  position: relative;
+}
+
+.main-container .toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: var(--black);
+  color: var(--dark-gray);
+  cursor: pointer;
+  top: 50px;
+  right: 50px;
+}
+
+.main-container .toggle-off {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: var(--dark-gray);
+  color: var(--black);
+  cursor: pointer;
+  top: 50px;
+  right: 50px;
+}
+
+.main-container .toggle:hover {
+  background-color: var(--light-gray);
+  color: var(--black);
+}
+
+.main-container .toggle-off:hover {
+  background-color: var(--light-gray);
+  color: var(--black);
+}

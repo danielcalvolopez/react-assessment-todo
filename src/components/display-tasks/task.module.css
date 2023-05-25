@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.5px solid;
+  padding: 15px 15px;
+}
+
+.container:hover {
+  background-color: var(--light-gray);
+  color: var(--black);
+}
+
+.delete {
+  display: flex;
+  cursor: pointer;
+}
+
+.delete:hover {
+  color: rgb(172, 13, 13);
+}
