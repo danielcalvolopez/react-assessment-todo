@@ -15,9 +15,11 @@ const Task = ({ title, id, status }) => {
   }));
 
   const handleDeleteTask = () => {
-    const filteredTask = tasks.filter((task) => task.id !== id);
+    const filteredTasks = tasks.filter((task) => task.id !== id);
 
-    setTasks(filteredTask);
+    setTasks(filteredTasks);
+
+    localStorage.setItem("tasks", JSON.stringify(filteredTasks));
   };
 
   return (
