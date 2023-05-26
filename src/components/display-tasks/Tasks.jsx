@@ -24,12 +24,12 @@ const Tasks = () => {
       <div className={classes.wrapper}>
         <TasksColumn status="todo" title="to do">
           {todos.map(({ name, id }) => (
-            <Task title={name} key={id} id={id} />
+            <Task status="todo" title={name} key={id} id={id} />
           ))}
         </TasksColumn>
         <TasksColumn status="completed" title="completed">
           {completed.map(({ name, id }) => (
-            <Task title={name} key={id} id={id} />
+            <Task status="completed" title={name} key={id} id={id} />
           ))}
         </TasksColumn>
       </div>
