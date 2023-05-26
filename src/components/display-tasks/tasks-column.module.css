@@ -2,13 +2,13 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding: 20px;
 }
 
 h3 {
   font-size: 35px;
   letter-spacing: 4px;
   text-transform: uppercase;
-  border-bottom: 0.5px solid var(--lightest-gray);
 }
 
 .list {
@@ -16,4 +16,19 @@ h3 {
   flex-direction: column;
   gap: 20px;
   padding: 20px 0;
+}
+
+.over {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  background-color: var(--dark-gray);
+  border-radius: 5px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.5px solid var(--lightest-gray);
 }

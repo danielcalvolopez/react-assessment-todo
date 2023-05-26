@@ -2,42 +2,54 @@
   position: relative;
 }
 
-.main-container .toggle {
+.toggle {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 90px;
-  height: 90px;
-  border-radius: 50%;
+  height: 30px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   position: absolute;
   background-color: var(--black);
   color: var(--dark-gray);
   cursor: pointer;
-  top: 50px;
-  right: 50px;
+  top: 160px;
+  right: 5%;
 }
 
-.main-container .toggle-off {
+.toggle-off {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 90px;
-  height: 90px;
-  border-radius: 50%;
+  height: 30px;
   position: absolute;
   background-color: var(--dark-gray);
   color: var(--black);
   cursor: pointer;
-  top: 50px;
-  right: 50px;
+  top: 0px;
+  right: 5%;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .main-container .toggle:hover {
-  background-color: var(--light-gray);
-  color: var(--black);
+  color: var(--lightest-gray);
 }
 
 .main-container .toggle-off:hover {
-  background-color: var(--light-gray);
-  color: var(--black);
+  color: var(--lightest-gray);
+}
+
+@media (max-width: 1100px) {
+  .toggle,
+  .toggle-off {
+    width: 60px;
+    height: 30px;
+  }
+
+  .toggle {
+    top: 160px;
+  }
 }
