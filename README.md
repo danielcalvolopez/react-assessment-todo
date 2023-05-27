@@ -1,3 +1,7 @@
+Install dependencies: npm install
+
+Start development mode: npm start
+
 I have created this little TODO app with React, using React DnD for the drag and drop function, and context to manage the global state.
 
 The form to add a new task can be shown or hidden from the DOM with the small arrow on the right side.
