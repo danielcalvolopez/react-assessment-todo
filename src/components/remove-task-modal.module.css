@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--black);
+  padding: 10px;
+}
+
+.header {
+  font-weight: 400;
+}
+
+.actions {
+  display: flex;
+  gap: 30px;
+}
+
+.actions button {
+  width: 100px;
+  border: 1px solid black;
+  background-color: transparent;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+
+.yes:hover {
+  background-color: rgba(255, 2, 2, 0.342);
+}
+
+.no:hover {
+  background-color: var(--lightest-gray);
+}

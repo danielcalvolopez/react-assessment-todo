@@ -12,7 +12,7 @@ const TaskContextProvider = ({ children }) => {
     name: "",
     status: "todo",
   });
-
+  const [taskEditing, setTaskEditing] = useState(null);
   const [isValid, setIsValid] = useState(true);
 
   const values = {
@@ -28,6 +28,8 @@ const TaskContextProvider = ({ children }) => {
     setTask,
     isValid,
     setIsValid,
+    taskEditing,
+    setTaskEditing,
   };
   return <TaskContext.Provider value={values}>{children}</TaskContext.Provider>;
 };

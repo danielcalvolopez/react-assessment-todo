@@ -1,21 +1,33 @@
 import classes from "./add-task.module.css";
-import { SlArrowRight } from "react-icons/sl";
-import { useContext } from "react";
+import { VscAdd } from "react-icons/vsc";
+import { useContext, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { TaskContext } from "../../context/TaskContext";
 
 const AddTask = () => {
-  const { setTasks, task, setTask, isValid, setIsValid } =
+  const { setTasks, task, setTask, isValid, setIsValid, tasks } =
     useContext(TaskContext);
 
+  const [error, setError] = useState("");
+
   const handleOnAddTask = (event) => {
-    setTask({ ...task, id: uuidv4(), name: event.target.value });
+    const value = event.target.value;
+
+    setTask({ ...task, id: uuidv4(), name: value });
   };
 
   const handlerSubmit = (event) => {
     event.preventDefault();
 
+    const found = tasks.find((item) => item.name === task.name);
+    if (found) {
+      setError("This task has already been added");
+      setIsValid(false);
+      return;
+    }
+
     if (task.name.length < 3) {
+      setError("Task must contain at least 3 characters");
       setIsValid(false);
       return;
     }
@@ -41,15 +53,11 @@ const AddTask = () => {
             placeholder="type your task..."
           />
           <button className={classes.button} type="submit">
-            <SlArrowRight size={17} />
+            <VscAdd size={25} />
           </button>
         </div>
 
-        {!isValid && (
-          <p className={classes.error}>
-            Task must contain at least 3 characters
-          </p>
-        )}
+        {!isValid && <p className={classes.error}>{error}</p>}
       </div>
     </form>
   );
